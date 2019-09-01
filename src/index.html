@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <link rel="stylesheet" media="all" href="scss/app.sass"> -->
+    <!-- <link rel="stylesheet" media="all" href="node_modules/swiper/dist/css/swiper.css"> -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Montserrat']
+        }
+      });
+  </script>
+  
+  </head>
+  <body class="bodyClass">
+
+    <!-- BEGIN content -->
+    <nav id="nav-left" class="nav-left">
+      <div class="wrap">
+        <div class="nav-left__mob-menu">
+          <div class="wrap-mob-menu">
+            <div class="hamburger"></div>
+          </div>
+        </div>
+        <div class="top">
+          <div class="logo-wrap">
+            <img class="logo" src="img/logo.svg" alt="Наша Школа. Образовательный портал">
+          </div>
+          <ul class="nav-items">
+            <li class="nav-items__item"><a href="about.html">О комплексе</a></li>
+            <li class="nav-items__item"><a href="#">Образование</a></li>
+            <li class="nav-items__item"><a href="#">Обучающимся</a></li>
+            <li class="nav-items__item"><a href="documents.html">Родителям</a></li>
+            <li class="nav-items__item"><a href="#">Педагогам</a></li>
+            <li class="nav-items__item"><a href="news.html">Новости</a></li>
+            <li class="nav-items__item"><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="nav-info">
+          <div class="wrap-links">
+            <div class="col-left">
+              <a href="#"><img src="img/nav-eye.svg" alt="Версия для слабовидящих"></a>
+            </div>
+            <div class="col-right">
+              <div class="change-lang"><a class="active" href="#">Рус</a> / <a href="#">En</a></div>
+              <div class="social">
+                <a href="https://vk.com/oknashashkola"><img src="img/vk.svg" alt="vk"></a> 
+                <a href="https://www.facebook.com/groups/251669309059750/"><img src="img/facebook.svg" alt="facebook"></a>
+                <a href="https://www.instagram.com/nashashkola/"><img src="img/insta.svg" alt="insta"></a>
+                <a href="https://www.youtube.com/channel/UC4zNl90zsMSSYZoikHfoB_A"><img src="img/youtube.svg" alt="youtube"></a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="#">Кратко о комплексе</a>
+            <a href="#">Сведения об образовательной организации</a>
+            <a href="#">Вход в ИС «Школа»</a>
+            <p>© 2019 ОАНО «Наша Школа»</p>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <section class="content page-home">
+      <div class="category">
+        <div class="category__row">
+          <div class="category__item category__education"><a href="#"><span>Образование</span></a></div>
+          <div class="category__item category__parent"><a href="#"><span>Родителям</span></a></div>
+        </div>
+        <div class="category__row">
+          <div class="category__item category__students"><a href="#"><span>Обучающимся</span></a></div>
+          <div class="category__item category__teachers"><a href="#"><span>Педагогам</span></a></div>
+        </div>
+      </div>
+      <div class="about-school"> 
+        <div class="about-school__logo">
+          <img src="img/about-logo.svg" alt="Логотипа «Наша Школа»">
+        </div>
+        <div class="about-school__text">
+          <h2 class="about-school__text__title">Наша Школа — образовательный комплекс <span class="blue">работает с 1994 года</span></h2>
+          <p class="about-school__text__p">Сегодня Наша Школа — это огромный спектр направлений в сфере непрерывного образования, профессионального самоопределения
+          и опережающей подготовки кадров: дошкольное и школьное образование, образование взрослых и детей, детско-взрослые
+          производства, школа эффективного менеджмента, диагностика качеств и профконсультирование, кинопроизводство,
+          образовательный туризм и образовательно-оздоровительные программы, педагогический консалтинг, проектирование и
+          разработка образовательных и педагогических технологий, экспертиза мыследеятельностных и деятельностных практик,
+          кластерно-сетевые межрегиональные проекты и программы, международные программы экранной культуры.</p>
+          <button class="outline-blue">Кратко о комплексе<img class="imgArrow" src="img/arrow-link-black.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="news-archive">
+        <div class="news-archive__link-all"><a href="#"><span>Архив новостей<img class="imgArrow" src="img/arrow-link.svg" alt=""></span></a></div>
+        <div class="news-archive__items">
+          <a href="#" class="news-archive__items__item">
+            <div class="news-archive__items__item__img"><img src="img/news-archive-1.jpg" alt="Фото новости"></div>
+            <div class="news-archive__items__item__text">
+              <div class="news-archive__items__item__text__date"><span class="big-date">2</span>апреля</div>
+              <p class="news-archive__items__item__text__title">Cостоялась XX научно-практическая конференция</p>
+            </div>
+          </a>
+          <a href="#" class="news-archive__items__item">
+            <div class="news-archive__items__item__img"><img src="img/news-archive-2.jpg" alt="Фото новости"></div>
+            <div class="news-archive__items__item__text">
+              <div class="news-archive__items__item__text__date"><span class="big-date">2</span>апреля</div>
+              <p class="news-archive__items__item__text__title">Cостоялась XX научно-практическая конференция</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="programms">
+        <a class="programms__link-all" href="#"><span class="arrowHover">Все проекты и программы дополнительного образования<img class="imgArrow" src="img/arrow-link.svg" alt=""></span></a>
+        <a href="#" class="programms__items"><span>Школьное ТВ</span></a>
+      </div>
+      <div class="smi">
+        <div class="smi__items">
+          <a href="#" class="smi__items__item">
+            <h3><span class="blue">О нас</span> говорят, о нас пишут...</h3>
+            <span class="link-min" >архив<img class="imgArrow" src="img/arrow-link-black.svg" alt=""></span>
+          </a>
+          <a href="#" class="smi__items__item">
+            <h3><span class="orange">Мы</span> говорим и пишем...</h3>
+            <span class="link-min">архив<img class="imgArrow" src="img/arrow-link-black.svg" alt=""></span>
+          </a> 
+        </div>
+      </div>
+      <div class="news">
+        <div class="news__items">
+          <div class="news__items__item">
+            <div class="news__items__item__img"><img src="img/news-1.jpg" alt="фото темы"></div>
+            <a href="news-page.html" class="news__items__item__text">
+              <div class="sub-title">актуально</div>
+              <h3>5 апреля</h3>
+              <p>Команда «ЭйНШтейн» образовательный комплекс «Наша Школа» призер Всероссийского турнира юных физиков!</p>
+            </a>
+          </div>
+        </div>
+        <div class="news__link-all"><a href=""><span>Архив всех дел нашего комплекса<img class="imgArrow" src="img/arrow-link-black.svg" alt=""></span></a></div>
+      </div>
+      <!-- <div class="social">
+        <div class="social__title">Мы в социальных сетях</div>
+        <img src="img/smi/2.jpg" alt="фото">
+        <img src="img/smi/5.jpg" alt="фото">
+        <img src="img/smi/1.jpg" alt="фото">
+        <img src="img/smi/3.jpg" alt="фото">
+        <img src="img/smi/4.jpg" alt="фото">
+        <img src="img/smi/6.jpg" alt="фото">
+      </div> -->
+      <div class="footer">
+        <div class="footer__partners">
+          <div class="footer__partners__link-all"><a href="#"><span>Партнеры<img class="imgArrow" src="img/arrow-link.svg" alt=""></span></a></div>
+          <div class="footer__partners__items">
+            <div class="footer__partners__items__item"><img src="img/footer-partner.jpg" alt="Партнер"></div>
+          </div>
+        </div>
+        <div class="footer__feedback">
+          <div class="footer__feedback__link-all"><a href="feedback.html"><span>Отзывы<img class="imgArrow" src="img/arrow-link.svg" alt=""></span></a></div>
+          <div class="footer__feedback__items">
+            <div class="owl-carousel owl-theme owl-loaded carousel" id="carousel">
+              <div class="footer__feedback__items__item owl-stage-outer">
+                <div class="owl-stage">
+                  <div class="owl-item">
+                    <h3>Татьяна Васильева</h3>
+                    <p>Это было одно из путешествий к СЕБЕ НАСТОЯЩЕМУ, такому какой ты есть, с возможностью большого роста себя как...</p>
+                  </div>
+                  <div class="owl-item">
+                    <h3>Татьяна Васильева2</h3>
+                    <p>Это было одно из путешествий к СЕБЕ НАСТОЯЩЕМУ, такому какой ты есть, с возможностью большого роста себя как...</p>
+                  </div>
+                  <div class="owl-item">
+                    <h3>Татьяна Васильева3</h3>
+                    <p>Это было одно из путешествий к СЕБЕ НАСТОЯЩЕМУ, такому какой ты есть, с возможностью большого роста себя как...</p>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="mainPaginator">
+                <i class="pagination-arrow left owl-prev1"><img src="img/pagination-arrow-l.svg" alt="предыдущая ссылка"></i>
+                <div class="footer__feedback__items__item__pagination pagination">
+                  <span class="pagination-link pagination-active">1</span>
+                  <span class="pagination-link">2</span>
+                  <span class="pagination-link">3</span>
+                </div>
+                <i class="pagination-arrow right owl-next2"><img src="img/pagination-arrow-r.svg" alt="предыдущая ссылка"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- END content -->
+
+    <!-- BEGIN scripts -->
+    <!-- <script type="text/javascript" src="js/app.js"></script> -->
+    <!-- END scripts -->
+
+  </body>
+</html>

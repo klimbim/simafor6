@@ -1,0 +1,753 @@
+// style
+
+
+
+	.category__education{
+		background: url('../img/education.jpg') 50% 50%;
+		transition: background .2s ease-in;
+		&:hover{background-image: url('../img/education-hover.jpg');}
+	}
+	.category__parent{
+		background: url('../img/parent.jpg') 50% 50%;
+		transition: background .2s ease-in;
+		&:hover{background-image: url('../img/parent-hover.jpg');}
+	}
+	.category__students{
+		background: url('../img/students.jpg') 50% 50%;
+		transition: all .2s ease-in;
+		&:hover{background-image: url('../img/students-hover.jpg');}
+	}
+	.category__teachers{
+		background: url('../img/teachers.jpg') 50% 50%;
+		transition: all .2s ease-in;
+		&:hover{background-image: url('../img/teachers-hover.jpg');}
+	}
+	
+	.category__item{
+		background-size: cover;
+		a{
+			// font-family: Montserrat;
+			@include link-white-60;
+		}
+	}
+	
+	
+	.about-school{
+		position: relative;
+		&::before{
+			content: "";
+			width: 120px;
+			height: 120px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: url("../img/about-decor-2.svg") no-repeat;
+	
+		}
+	}
+	
+	.about-school__text{
+		background-color: $bgGray;
+		padding: 16% 7%;
+		position: relative;
+		&::before{
+			content: "";
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: url("../img/about-decor-1.svg") no-repeat;
+		}
+	}
+	.about-school__text__title{
+		font-weight: bold;
+		// font-size: 52px;
+		@include scss-font-lock(24px, 52px, 600px, 1700px);
+		line-height: 1.5;
+		margin-bottom: 6vh;
+	}
+	
+	
+	.about-school__text__p{
+		margin-bottom: 30px;
+		@include scss-font-lock(14px, 20px, 600px, 1700px);
+		line-height: 2;
+	}
+	
+	
+	.about-school__logo img{
+		max-height: 495px;
+	}
+	
+	
+	.news-archive__link-all{
+		background-color: $darkBlue;
+		a{
+			font-style: normal;
+			font-weight: bold;
+			// font-size: 30px;
+			@include scss-font-lock(15px, 30px, 600px, 1700px);
+			line-height: 2;
+			color: #FFFFFF;
+			text-decoration: none;
+		}
+	}
+	
+	
+	.news-archive__items__item:hover .news-archive__items__item__text__date{
+		color: $blue
+	}
+	.news-archive__items__item{
+		text-decoration: none;
+		color: black;
+	}
+	.news-archive__items__item__img{
+		overflow: hidden;
+		img{
+			transition: 1s;
+			&:hover{transform: scale(1.2);}
+		}
+	}
+	.news-archive__items__item__text{
+		padding: 30px;
+		.news-archive__items__item__text__title{
+			font-style: normal;
+			font-weight: bold;
+			// font-size: 16px;
+			@include scss-font-lock(11px, 16px, 600px, 1700px);
+			line-height: 1.5;
+		}
+	}
+	
+	
+	.news-archive__items__item__text__date{
+		@include text_30_a;
+		
+		.big-date{
+			// font-size: 52px;
+			@include scss-font-lock(26px, 52px, 600px, 1700px);
+			line-height: 1;
+			display: block;
+		}
+	}
+	
+	.news-archive{
+		img{
+			object-fit: cover;
+			height: 100%;
+		}
+	}
+	
+	.programms__items{
+		background: url('../img/programms-1.jpg') 50% 50% no-repeat;
+		background-size: cover;
+		// max-height: 10;
+		@include link-white-60;
+		transition: background .2s ease-in;
+		&:hover{background-image: url('../img/programms-1-hover.jpg');}
+	
+		&:before{
+			content: "";
+			padding-top: 100%;
+			float: left;
+		}
+	
+		
+		
+	}
+	
+	.programms__link-all{
+		background-color: $orange;
+		height: 45vh;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		position: relative;
+		// @include arrow;
+		&::before{
+			content: "";
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			top: -80px;
+			right: 0;
+			background: url("../img/programms-decor-1.svg") no-repeat;
+		}
+		@include text_30_a;
+		color: white;
+		text-decoration: none;
+		// width: 100%
+	
+	}
+	
+	.smi{
+		position: relative;
+		&::before{
+			content: "";
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+			
+			background: url("../img/smi-decor-2.svg") no-repeat;
+			@include _979{
+				width: 60px;
+				height: 60px;
+				background-size: contain;
+				bottom: inherit;
+				top: 0;
+			}
+		}
+		h3{
+			font-weight: bold;
+			// font-size: 52px;
+			@include scss-font-lock(20px, 52px, 600px, 1700px);
+			line-height: 1.5;
+		}
+		&__items{
+			background-color: $bgGray;
+			position: relative;
+			// padding: 0 50px 0 0;
+			&::before{
+				content: "";
+				width: 100px;
+				height: 100%;
+				background-color: $bgGray;
+				position: absolute;
+				left: -100px;
+			}
+			&::after{
+				content: "";
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 0;
+				left: -200px;
+				background: url("../img/smi-decor-1.svg") no-repeat;
+			}
+			.link-min{
+				font-style: normal;
+				font-weight: bold;
+				font-size: 12px;
+				line-height: 80px;
+				/* or 671% */
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				
+	
+			}
+			&__item{
+				margin: 3% 3% 3% 0 ;
+				position: relative;
+				text-decoration: none;
+				// text-decoration: none;
+				color: black;
+				cursor: pointer;
+				&:before{
+					content: "";
+					position: relative;
+					display: block;
+					width: 15%;
+					height: 3%;
+					margin-bottom: 3em;
+					background-color: $blue;
+			
+				}
+				span{
+					&:hover{
+						color: $blue;
+					}
+				}
+				&:nth-child(2){
+					&:before{
+						background-color: $orange;
+					}
+					span{
+						&:hover{
+							color: $orange;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.news{
+	  &__items{
+		&__item{
+		  background-color: $blue;
+		  color: white;
+		  img{
+			  object-fit: cover;
+			  height: 100%;
+			}
+		}
+		h3{
+			font-style: normal;
+			font-weight: bold;
+			// font-size: 52px;
+			@include scss-font-lock(20px, 52px, 600px, 1700px);
+			line-height: 2;
+		}
+		p{
+			font-size: 30px;
+			@include scss-font-lock(15px, 30px, 600px, 1700px);
+			line-height: 1.7;	
+		}
+		a{
+			color: white;
+			text-decoration: none;
+		}
+	  }
+	  &__link-all{
+			@include text_30_a;
+			font-weight: 700;
+			
+			text-align: center;
+			position: relative;
+			/* dark blue */
+			background-color: $bgGray;
+			&::after{
+				content: "";
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url("../img/news-decor-1.svg") no-repeat;
+			}
+			a{
+				text-decoration: none;
+				color: $darkBlue;
+				padding: 50px;
+			}
+	  }
+	}
+	
+	.news__items__item__img{
+		overflow: hidden;
+		img{
+			transition: 1s;
+			&:hover{transform: scale(1.2);}
+		}
+	}
+	
+	.sub-title{
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 30px;
+		/* or 250% */
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+	
+		/* white */
+		color: #FFFFFF;
+	}
+	
+	.footer{
+		h3{
+			@include text_30_a;
+			color: $darkBlue;
+			margin-bottom: 6%;
+		}
+		p{
+			font-style: normal;
+			font-weight: normal;
+			@include scss-font-lock(14px, 16px, 600px, 1700px);
+			line-height: 2;
+		}
+		a{
+			font-style: normal;
+			font-weight: bold;
+			// font-size: 20px;
+			@include scss-font-lock(15px, 20px, 600px, 1700px);
+			line-height: 1.5px;
+			color: white;
+			text-decoration: none;
+			width: 100%;
+			height: 100%;
+		}
+		&__feedback__items__item{
+			// padding: 40px;
+		}
+		img{
+			max-height: 360px;
+			max-width: 480px;
+		}
+	
+	}
+
+
+// layout
+
+  .category{
+    // display: flex;
+    width: 100%;
+    height: 90vh;
+    &__row{
+      display: flex;
+      height: 50%;
+      flex-wrap: wrap;
+    }
+    &__item{
+      width: 50%;
+      background-size: cover;
+      a{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+       
+        span{
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  .about-school{
+    display: flex;
+    &__logo{
+      width: calc(100% / 3 * 1);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10% 0 0 0;
+    }
+    &__text{
+      width: calc(100% / 3 * 2);
+      &__title{word-break: break-word;}
+    }
+  }
+  
+  .news-archive{
+    display: flex;
+    &__link-all{
+      width: calc(100% / 3 * 1);
+      a{
+        display: flex;
+        width: 100%;
+        // padding: 10% 0;
+        height: 100%;
+		justify-content: center;
+		align-items: center;
+        // @include arrow;
+      }
+    }
+    &__items{
+      width: calc(100% / 3 * 2);
+      display: flex;
+      &__item{
+        // padding: 30px;
+        display: flex;
+        &__img{
+          width: 50%;
+          margin-bottom: -2px;
+        }
+        &__text{
+			width: 50%;
+			position: relative;
+			&::after{
+				content: '';
+				margin-top: -28px;
+				position: absolute;
+				z-index: 1;
+				right: 100%;
+				top: 30%;
+				border-top: 28px solid transparent;
+				border-bottom: 28px solid transparent;
+				border-left: 28px solid #fff;
+				// -moz-transition: all 0.3s ease-in-out;
+				// -webkit-transition: all 0.3s ease-in-out;
+				// -o-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				transform: rotate(180deg);
+			}
+		}
+      }
+    }
+  }
+  
+  .programms{
+    display: flex;
+    &__link-all{
+      width: calc(100% / 3 * 1);
+    //   height: 50%;
+      padding: 30px;
+      align-self: flex-end;
+      // a{display: flex;}
+      span{
+          align-self: center;
+      }
+      
+    }
+    &__items{
+      width: calc(100% / 3 * 2);
+      position: relative;
+      height: 90vh;
+      // margin-bottom: -12px;
+      span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%); 
+        white-space: nowrap;
+      }
+    }
+  }
+  
+  .smi{
+    display: flex;
+    justify-content: flex-end;
+    &__items{
+      width: calc(100% / 3 * 2);
+      display: flex;
+      &__item{
+        width: 50%;
+        padding: 50px 0
+      }
+    }
+  }
+  
+  .news{
+    display: flex;
+    &__items{
+      width: calc(100% / 3 * 2);
+      &__item{
+        display: flex;
+        // background-color: $blue;
+        &__img{
+          width: 50%;
+          // margin-bottom: -2px;
+        }
+        &__text{
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+		  padding: 40px;
+		  position: relative;
+		  &::after{
+				content: '';
+				margin-top: -28px;
+				position: absolute;
+				z-index: 1;
+				right: 100%;
+				top: 20%;
+				border-top: 28px solid transparent;
+				border-bottom: 28px solid transparent;
+				border-left: 28px solid $blue;
+				// -moz-transition: all 0.3s ease-in-out;
+				// -webkit-transition: all 0.3s ease-in-out;
+				// -o-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				transform: rotate(180deg);
+			}
+        }
+      }
+    }
+    &__link-all{
+      width: calc(100% / 3 * 1);
+      
+      a{
+        display: flex;
+        width: 100%;
+        // padding: 10% 0;
+        height: 100%;
+        justify-content: center;
+        span{
+          align-self: center;
+        }
+      }
+    }
+  }
+  
+  .footer{
+	display: flex;
+	// min-width: 0;
+	flex-wrap: wrap;
+	// overflow: hidden;
+    a{
+        display: flex;
+        width: 100%;
+        // padding: 10% 0;
+        height: 100%;
+        justify-content: center;
+        span{
+          align-self: center;
+        }
+      }
+    &__partners{
+      width: 50%;
+      display: flex;
+    //   flex: 1 0 384px;
+      align-items: center;
+      justify-content: center;
+      &__link-all{
+        width: calc(100% / 2.25 * 1);
+        text-align: center;
+        height: 100%;
+        background-color: $violet;
+        // @include arrow;
+      }
+      &__items{width: calc(100% / 2.25 * 1.25);}
+    }
+    &__feedback{
+      width: 50%;
+      display: flex;
+    //   flex: 1 0 auto;
+      // flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      &__link-all{
+        width: calc(100% / 2.25 * 1);
+        text-align: center;
+        height: 100%;
+        background-color: $darkBlue;
+        // @include arrow;
+      }
+      &__items{
+		  width: calc(100% / 2.25 * 1.25);
+		  p{
+			//   margin-bottom: 40px;
+		  }
+		}
+    }
+  }
+
+
+
+@include _480{
+    .category__item{width: 100%;}    
+}
+
+@include _768{
+    .about-school__logo{
+        display: none;
+    }
+    .about-school__text{
+		width: 100%;
+		// text-align: center;
+        &::before{
+            content: "";
+            width: 40px;
+            height: 40px;
+            background: url("../img/about-decor-1.svg") no-repeat;
+			background-size: contain;
+			
+
+        }
+	}
+	.news__link-all{
+			// text-align: center;
+			&::after{
+				width: 60px;
+				height: 60px;
+				// background: url("../img/about-decor-1.svg") no-repeat;
+				background-size: contain;
+			
+			}
+	  }
+}
+
+@include _1170{
+    .news-archive__items{
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    .news-archive__link-all{
+        width: 50%;
+    }
+}
+@include _600{
+    .news-archive{flex-direction: column-reverse}
+    .news-archive__items{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .news-archive__link-all{
+        width: 100%;
+        a{
+            padding: 60px 0;
+        }
+	}
+	.programms{
+		flex-direction: column-reverse!important;
+		&>a{width: 100%!important;}
+	}
+}
+
+
+@include _768{
+    .programms{
+        // height: 40vh;
+        flex-direction: row-reverse;
+        &__link-all, &__items{
+            width: 50%!important;
+            
+        }
+        &__link-all{
+            // height: auto!important;
+            align-self: stretch;
+            // height: 100%;
+            &::before{
+                display: none;
+            }
+        }
+        &__items{
+            // height: auto;
+            height: auto!important;
+        }
+    }
+}
+
+
+@include _768{
+
+    .smi__items{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+		&::before{display: none;}
+		&__item{
+			text-align: center;
+			&::before{
+				left: 50%;
+				transform: translateX(-50%);	
+			}
+		}
+
+    }
+
+}
+
+@include _768{
+    .news{
+        flex-direction: column-reverse;
+    }
+    .news__items{width: 100%}
+	.news__link-all{
+		width: 100%;
+		a{padding: 80px 60px;}
+	}
+	
+	.news__items__item__img{width: 25%;}
+	.news__items__item__text{
+		width: 75%;
+		padding: 15px;
+	}
+
+	.about-school__text__title {
+		margin-bottom: 1rem;
+	}
+
+	.footer__partners{
+		flex: 1 0 100%;
+	}
+
+
+}

@@ -1,0 +1,54 @@
+.outline-blue{
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 18px;
+	font-family: Montserrat;
+	font-style: normal;
+	padding: 20px 40px;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	border: 1px solid #4B69FF;
+	color: #4B69FF;
+	background: none;
+	cursor: pointer;
+	&:hover{
+		color: white;
+		background-color: $blue;
+	}
+}
+
+a{color:$blue}
+
+@mixin button_blue{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Montserrat;
+    font-style: normal;
+    padding: 20px 40px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    background-color: #4B69FF;
+    color: white;
+    border: none;
+	color: white;
+	&:hover{
+		background-color: #F4794F;
+	}
+}
+
+@mixin text_12{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 1.6;
+}
+
+@mixin text_30_a{
+	font-style: normal;
+	font-weight: bold;
+	// font-size: 30px;
+	@include scss-font-lock(15px, 30px, 600px, 1700px);
+	line-height: 1.5;
+}
+

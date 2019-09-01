@@ -1,0 +1,88 @@
+// Library
+@import 'library/variables';
+@import 'library/mixins';
+@import 'library/animations';
+
+.tabsy {
+
+    > button { 
+
+        width: 100%; font-family: inherit; font-size: 100%; margin: 0; outline: 0; border: 0; 
+        vertical-align: baseline; box-sizing: border-box; background: transparent; 
+
+    }
+
+    > .tabButton {
+
+        display: block; 
+        transition: all $transitionSpeed ease-in-out;
+
+    }
+
+    > input {
+
+        display: none;
+
+        &:checked + label {
+            color: #A1A2A3;
+            &::before{
+                background: url("../img/link-arrow-gray.svg") no-repeat left center;
+                content: "";
+                display: block;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 0;
+                top: 28%;
+            }
+
+            & + .tab {
+
+                display: block; 
+
+                > .about__slider__wrap {
+
+                    @include animation(showTab $transitionSpeed ease-in-out); 
+                    
+                }
+
+            }
+
+        }
+
+    }
+
+    > .tab {
+
+        display: none; 
+
+    }
+
+    @media screen and (min-width: $breakpoint) {
+
+        display: flex; flex-wrap: wrap; 
+
+        > .tabButton {
+
+            order: 1; align-items: flex-start; cursor: pointer;
+
+        }
+
+        > input {
+
+            &:checked + label {
+
+
+            }
+
+        }
+
+        > .tab {
+
+            order: 2;
+
+        }
+
+    }
+
+}

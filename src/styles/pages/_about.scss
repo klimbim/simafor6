@@ -1,0 +1,600 @@
+.page-about{
+  margin-left: 560px;
+}
+
+.about-a{background-color: #4E50CE}
+
+.about__list__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  li{
+    width: 50%;
+    padding-top: 50px;
+    margin: 0 0px 30px 0; 
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    position: relative;
+  }
+  .about-icon{
+      img{
+        //   background: url('../img/about/icons/s-o.svg') no-repeat;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: 0;
+      }
+      &::after{
+        //   background: url('../img/about/icons/s-o.svg') no-repeat;
+        //   width: 50px;
+        //   height: 50px;
+        //   position: absolute;
+      }
+
+    //   top: -100%;
+  }
+}
+
+
+
+
+.about__text__p{
+    margin-bottom: 30px;
+	@include scss-font-lock(14px, 20px, 1100px, 1920px);
+    line-height: 2;
+    
+}
+
+
+@include _1170{
+    .about__text__title{
+       margin-bottom: 3vh; 
+    }     
+}
+
+.about__text__title{
+    font-weight: bold;
+    // font-size: 52px;
+    @include scss-font-lock(26px, 52px, 600px, 1700px);
+    line-height: 1.5;
+    margin-bottom: 6vh;
+    
+}
+@include _1170{
+    .about__text__title{
+        margin-bottom: 3vh;
+        word-break: break-word; 
+    }     
+}
+
+.about__text{
+    padding: 6rem 0 6rem 6rem;
+    width: 67%;
+}
+
+.about__logo-block{
+    display: flex;
+    width: 33%;
+    padding: 6rem 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    img{max-width: 270px;}
+    
+}
+
+.row{display: flex}
+
+
+
+
+
+
+
+
+.about__photo-slider__wrap{
+    position: relative;
+}
+
+.about__photo-slider__items{
+    // position: absolute;
+    left: 0;
+    right: 0;
+
+    &:before{
+        content: "";
+        padding-top: 100%;
+        float: left;
+    }
+
+    
+    
+}
+
+.about__photo-slider{
+    display: flex;
+    margin-bottom: -5vh;
+    &__wrap{
+        // height: 90vh;
+        width: calc(100% / 3 * 2);
+        height: 60%;
+        margin-left: auto;
+    }
+
+}
+
+
+
+
+.about__main{
+    display: flex;
+
+    h2{
+        font-weight: bold;
+        // font-size: 52px;
+        @include scss-font-lock(32px, 52px, 600px, 1700px);
+        line-height: 1.5;
+        margin-bottom: 6vh;
+        
+    }
+    li{
+        margin-bottom: 30px;
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        line-height: 2;
+    }
+
+    p{
+        margin-bottom: 30px;
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        line-height: 2;
+    }
+}
+
+.about__main__info{
+    padding: 3rem 3rem 3rem 6rem;
+    width: 67%;
+    background-color: #F1F2F2;
+}
+
+.about__main__secondInfo{
+    width: 33%;
+    padding: 10rem 2rem 6rem 4rem;
+}
+
+.strongBlue{
+    font-weight: bold;
+    color: $blue;
+}
+
+
+.about__teachers{
+    display: flex;
+    margin-bottom: 6rem;
+
+    &__left-col{
+        width: 67%;
+        padding: 6rem 6rem 0;
+        
+    }
+    &__right-col{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // align-self: center;
+        align-items: center;
+        .video{
+            margin-bottom: 2rem
+        }
+    }
+    p{
+        margin-bottom: 30px;
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        line-height: 2;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    h2{
+        font-weight: bold;
+        // font-size: 52px;
+        @include scss-font-lock(32px, 52px, 600px, 1700px);
+        line-height: 1.5;
+        margin-bottom: 6vh;
+        word-break: break-word;
+    }
+}
+
+    .life-sport{
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url("../img/about/life-slides/about-sport-2.svg"), url("../img/about/life-slides/about-sport-1.svg"), url("../img/about/life-slides/about-sport-3.svg");
+            background-repeat: no-repeat, no-repeat;
+            background-position: left bottom, center top, right 80%;
+            background-size: 240px 240px, 80px 80px, 80px 80px;
+        }
+    }
+
+    .life-health{
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url("../img/about/life-slides/about-health-2.svg"), url("../img/about/life-slides/about-health-1.svg"), url("../img/about/life-slides/about-health-3.svg");
+            background-repeat: no-repeat, no-repeat;
+            background-position: left bottom, center top, right 80%;
+            background-size: 240px 240px, 80px 80px, 80px 80px;
+        }
+    }
+    .life-art{
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url("../img/about/life-slides/about-art-2.svg"), url("../img/about/life-slides/about-art-1.svg");
+            background-repeat: no-repeat, no-repeat;
+            background-position: left bottom, center top;
+            background-size: 240px 240px, 80px 80px;
+        }
+    }
+    .life-extra{
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url("../img/about/life-slides/about-extra-2.svg"), url("../img/about/life-slides/about-extra-1.svg"), url("../img/about/life-slides/about-extra-3.svg");
+            background-repeat: no-repeat, no-repeat;
+            background-position: left bottom, center top, right 80%;
+            background-size: 240px 240px, 80px 80px, 80px 80px;
+        }
+    }
+
+.about__life{
+    position: relative;
+    background-color: #F1F2F2;
+    padding: 6rem;
+    min-height: 1000px;
+    .wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .about__life__tabs{
+        width: 33%;
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: bold;
+        /* or 167% */
+
+    }
+    .about__life__tab{
+        cursor: pointer;
+        margin-bottom: 80px;
+        width: 23%;
+        z-index: 20;
+        padding: 10px 20px 10px 24px;
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        line-height: 2;
+        font-weight: bold;
+        color: $blue;
+        position: relative;
+        &::before{
+            background: url("../img/link-arrow-blue.svg") no-repeat left center;
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+            top: 28%;
+        }
+
+        &:hover{
+            margin-left: 20px;
+        }
+    }
+    .about__life__slide{
+        .about__slider__wrap{
+            width: 57%;
+            position: absolute;
+            // right: 3rem;
+            left: 33%;
+            top: 15rem
+        }
+        li{
+            margin-bottom: 20px;
+            line-height: 2;
+            &::before {
+                color: $blue; /* Цвет маркера */
+                content: "• "; /* Сам маркер */
+                padding-right: 7px; /* Расстояние от маркера до текста */
+            }
+            // list-style: circle;
+        }
+
+    }
+
+    p{
+        margin-bottom: 30px;
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        line-height: 2;
+        display: block;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    h2{
+        font-weight: bold;
+        // font-size: 52px;
+        @include scss-font-lock(32px, 52px, 600px, 1700px);
+        line-height: 1.5;
+        margin-bottom: 6vh;
+    }
+}
+
+.disnone{display: none;}
+
+
+.about__contacts{
+    display: flex;
+    padding: 6rem;
+    p{
+        margin-right: 6rem;
+        line-height: 2;
+        width: 30%;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.footer-feedback{
+    padding: 6rem;
+    h2{
+        font-weight: bold;
+        // font-size: 52px;
+        @include scss-font-lock(32px, 52px, 600px, 1700px);
+        line-height: 1.5;
+        margin-bottom: 6vh;
+    }
+    .lawInfo{
+		@include text_12;
+		max-width: 500px;
+		/* or 19px */
+
+		/* dark grey */
+		color: #A1A2A3;
+    }
+    .inputs-wrap{
+		display: flex;
+		margin-bottom: 0;
+		// flex-direction: column;
+	}
+	.input-items{
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		margin-right: 40px;
+	}
+	textarea{
+		font-family: Montserrat;
+		width: 50%;
+		border: 1px solid #E6E7E8;
+		font-style: normal;
+		font-weight: normal;
+		@include scss-font-lock(15px, 20px, 600px, 1700px);
+		line-height: 1.5px;
+		padding: 30px 20px;
+		margin-bottom: 20px;
+	}
+	button{
+		@include button-blue;
+		float: left; 
+		margin-right: 30px;
+		
+		// background: none;
+		cursor: pointer;
+
+	}
+    
+}
+
+
+
+
+@include _1170{
+    .annotation{
+        position: static;
+        height: auto;
+        width: auto;
+        margin-left: 240px;
+        .annotation__wrap{
+            width: auto;
+            margin: 0;
+            padding: 50px;
+            
+        }
+        .annotation__info{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .page-about{
+        margin-left: 240px;
+    }
+    .about__text{
+        padding: 3rem 0 3rem 3rem;
+    }
+    .about__main__info{padding-left: 3rem}
+    .about__main__secondInfo{
+        padding: 10rem 2rem 3rem 2rem;
+    }
+    .about__teachers__left-col{
+        padding: 3rem;
+    }
+
+}
+
+
+
+
+@include _768{
+
+    .page-about{
+        .outline-blue{width: 90%;}
+        .row{
+            flex-direction: column;
+            // margin-left: 64px;
+        }
+        .about__logo-block{
+            align-self: center;
+            width: 90%;
+            img{
+                margin-bottom: 50px;
+            }
+        }
+
+    }
+
+    .cite{font-size: 16px!important;}
+
+    
+
+    .about__main__info{padding: 2rem;}
+
+    .about__text{
+        padding: 2rem;
+        width: 100%;
+    }
+ 
+
+    .about__main__secondInfo{
+        padding: 2rem;
+        p{margin-bottom: 10px;}
+        li{margin-bottom: 10px;}
+    }
+    .about__main{
+        flex-direction: column;
+        margin-bottom: 40px;
+        &>div{
+            width: 100%;
+        }
+    }
+    .about__photo-slider{
+        margin-bottom: 0;
+        
+    }
+    .about__photo-slider__wrap{width: 100%}
+    .about__teachers{
+        flex-direction: column;
+        &>div{width: 100%;}
+        h2{margin-bottom: 1rem;}
+        p{margin-bottom: 10px;}
+    }
+    .about__contacts{
+        padding: 2rem;
+        flex-direction: column;
+        p{
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+    .about__life{
+        padding: 2rem;
+        min-height: auto;
+        .wrap{
+            flex-direction: column;
+            > input {
+               &:checked + label {
+                    &::before{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+        }
+    }
+    .about__life__slide{
+      &::before{display: none}
+      .about__slider__wrap{
+        width: 90%!important;
+        position: relative!important;
+        left: 0!important;
+        margin-bottom: 40px;
+        margin-left: 5px;
+        top: 0!important;
+      }
+
+    }
+
+
+
+
+
+
+     .about__life__tab{
+        margin-bottom: 10px!important;
+        // width: 33%;
+        // padding: 10px 20px 10px;
+         &:hover{
+            margin-left: 0!important;
+        }
+
+    }
+    .about__teachers__right-col{
+        // align-self: center;
+    }
+    .about__teachers__left-col{
+        padding: 2rem;
+        // width: 100%;
+    }
+
+    .annotation__wrap{
+        padding: 2rem!important;
+        
+    }
+        
+}
+
+@include _480{
+    .page-about{
+        
+        .about__text{
+            padding: 1rem;
+            width: 100%;
+        }
+        .about__main__info{
+            padding-left: 1rem;
+           
+        }
+        .about__main__secondInfo{
+            padding: 1rem;
+        }
+        .about__teachers__left-col{
+            padding: 1rem;
+        }
+        
+    }    
+}
+

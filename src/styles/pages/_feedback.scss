@@ -1,0 +1,233 @@
+// .documents-a{
+//     a{
+//         margin-bottom: 30px;
+//         @include scss-font-lock(15px, 20px, 600px, 1700px);
+//         line-height: 2;
+//         color: white;
+//         text-decoration: none;
+
+//     }
+// }
+
+.page-feedback{
+    margin-left: 560px;
+    padding: 6rem;
+    h1{
+        font-weight: bold;
+        @include scss-font-lock(32px, 52px, 600px, 1700px);
+        line-height: 1.5;
+        margin-bottom: 6vh;
+    }
+    .footer-feedback{padding: 2rem 0;}
+}
+
+.page-feedback__items{
+    margin: 0 -6rem;
+}
+
+.page-feedback__item{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    max-height: 280px;
+    overflow: hidden;
+    transition: 0.2s;
+    &:nth-child(odd){
+        background-color: #F1F2F2;
+        .feedback__info{
+            &::after{
+				content: '';
+				margin-top: -28px;
+				position: absolute;
+				z-index: 1;
+				right: 100%;
+				top: 20%;
+				border-top: 28px solid transparent;
+				border-bottom: 28px solid transparent;
+				border-left: 28px solid #F1F2F2;
+				// -moz-transition: all 0.3s ease-in-out;
+				// -webkit-transition: all 0.3s ease-in-out;
+				// -o-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				transform: rotate(180deg);
+			}
+        }
+    }
+    &:nth-child(even){
+        background-color: #E6E7E8;
+        .feedback__info{
+            &::after{
+				content: '';
+				margin-top: -28px;
+				position: absolute;
+				z-index: 1;
+				right: 100%;
+				top: 20%;
+				border-top: 28px solid transparent;
+				border-bottom: 28px solid transparent;
+				border-left: 28px solid #E6E7E8;
+				// -moz-transition: all 0.3s ease-in-out;
+				// -webkit-transition: all 0.3s ease-in-out;
+				// -o-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				transform: rotate(180deg);
+			}
+        }
+    }
+    &:hover{
+        color: $blue;
+        .feedback__img{width: 22%; transition: 0.2s;}
+        // .feedback__info{width: 75%}
+
+    }
+}
+
+.feedback__img{
+    width: 25%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.feedback__info{
+    width: 75%;
+    padding: 50px 80px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    h3{
+        font-style: normal;
+        font-weight: bold;
+        // font-size: 30px;
+        @include scss-font-lock(15px, 30px, 600px, 1700px);
+        line-height: 2;
+    }
+    span{
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        color: #A1A2A3;
+    }
+    p{
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        line-height: 2;
+    }
+}
+
+.feedback-s{
+    a{
+        margin-bottom: 30px;
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        line-height: 2;
+        color: white;
+        text-decoration: none;
+
+    }
+}
+
+@include _1024{
+    .page-feedback{
+        margin-left: 240px;
+    }
+    .page-feedback{
+        padding: 3rem;
+    }
+    .page-feedback__items{
+        margin: 0 -3rem;
+    }
+    .footer-feedback{
+        padding: 3rem
+    }
+
+    .feedback-s{
+         display: none;
+        // position: static;
+        // height: auto;
+        // width: auto;
+        // margin-left: 240px;
+        .submenu-dinamic__wrap{
+            width: auto;
+            margin: 0;
+            padding: 50px; 
+            
+        }
+    }
+}
+// @include _960{
+//     .page-feedback{
+//         margin-left: 240px;
+//     }
+// }
+
+
+@include _768{
+    .page-feedback__item{
+        flex-direction: column;
+        max-height: 100%;
+        // margin-left: 64px;
+    }
+
+    .page-feedback{
+        padding: 2rem;
+    }
+
+    .page-feedback__items {
+        margin: 0 -2rem;
+    }
+    
+    .feedback__info{
+        margin: 2rem 2rem 4rem;
+        padding: 0;
+        // width: 90%
+    }
+    // .documents-a{display: none;}
+    // // .feedback__img{margin: 2rem 2rem 0;}
+    .footer-feedback{
+        padding: 2rem;
+        flex-direction: column;
+        .inputs-wrap{
+            flex-direction: column;
+            div, textarea{
+                width: 100%;
+            }
+        }
+        
+    }
+
+    .submenu-dinamic-mob{
+        display: block!important;
+        z-index: 210;
+        left: 64px;
+        width: 240px;
+    }
+
+
+
+}
+
+
+
+@include _1400{
+     .documents-s{
+         display: none;
+        // position: static;
+        // height: auto;
+        // width: auto;
+        // margin-left: 240px;
+        .submenu-dinamic__wrap{
+            width: auto;
+            margin: 0;
+            padding: 50px; 
+            
+        }
+    }
+    
+    
+    .page-documents{
+        margin-left: 240px;
+        // margin-right: 340px;
+        padding: 3rem;
+    }
+}
+
+

@@ -1,0 +1,198 @@
+
+
+.documents-s{
+    a{
+        margin-bottom: 30px;
+        @include scss-font-lock(15px, 20px, 600px, 1700px);
+        line-height: 2;
+        color: white;
+        text-decoration: none;
+
+    }
+}
+
+.page-documents{
+    margin-left: 560px;
+    margin-right: 340px;
+    padding: 6rem;
+}
+
+
+.page-documents__nav{
+    width: 340px;
+    height: 100%;
+    background: #F4794F;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 3rem 3rem;
+    li{
+        margin-bottom: 15px;
+        &:hover{
+            a{
+                opacity: 1;
+            }
+        }
+    }
+    a{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: white;
+        opacity: 0.5;
+        text-decoration: none;
+        
+    }
+    .orange-nav-active{
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('../img/arrow-link.svg') no-repeat center center;
+            left: -23px;
+            top: 5%;
+        }
+        a{
+            font-weight: bold;
+            opacity: 1;
+        }
+    }
+}
+
+.page-documents__title{
+    font-weight: bold;
+    // font-size: 52px;
+    @include scss-font-lock(32px, 52px, 600px, 1700px);
+    line-height: 1.5;
+    margin-bottom: 6vh;
+}
+
+.page-documents__item{
+    margin-bottom: 30px;
+	@include scss-font-lock(15px, 20px, 600px, 1700px);
+    line-height: 2;
+    a{
+        color: #4B69FF;
+    }
+}
+
+
+.documents-button-nav{
+    display: none;
+}
+
+.displayActive{
+    display: block!important;
+}
+
+.backButton{
+    display: none;
+    width: 64px;
+    height: 64px;
+    background-color: #F1F2F2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 240;
+    padding: 14px;
+}
+
+@include _1400{
+     .documents-s{
+         display: none;
+        // position: static;
+        // height: auto;
+        // width: auto;
+        // margin-left: 240px;
+        .submenu-dinamic__wrap{
+            width: auto;
+            margin: 0;
+            padding: 50px; 
+            
+        }
+    }
+    
+    
+    .page-documents{
+        margin-left: 240px;
+        // margin-right: 340px;
+        padding: 3rem;
+    }
+}
+
+
+@include _768{
+    .page-documents{
+        padding: 2rem!important;
+    }
+    .page-documents__nav{display: none;}
+    .page-documents{
+        // margin-left: 240px;
+        margin-right: 0;
+        padding: 3rem;
+    }
+    .documents-button-nav{
+        display: block!important;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: calc(100% - 64px);
+        margin-left: 64px;
+        background-color: #F4794F;
+        color: white;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 27px;
+        border: 0;
+        text-align: left;
+        padding: 20px 30px;
+        cursor: pointer;
+        outline: none;
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            // transform: rotate(-90deg);
+            transform: translateY(-50%) rotate(-90deg);
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            background: url('../img/arrow-link.svg') no-repeat center center;
+        }
+    }
+    .doc-button-up{
+        top: 0;
+        bottom: inherit;
+        z-index: 10;
+        &::after{
+            transform: translateY(-50%) rotate(90deg);
+          
+        }
+    }
+    .doc-menu-show{
+        display: block;
+        // height: 100%;
+        // position: absolute;
+        overflow-y: auto;
+        // top: 57px;
+        width: calc(100% - 64px);
+        scrollbar-width: none;
+        padding-top: 60px;
+        // bottom: 57px;
+    }
+        /* хром, сафари */
+    .doc-menu-show::-webkit-scrollbar { width: 0; }
+
+    /* ie 10+ */
+    .doc-menu-show { -ms-overflow-style: none; }
+
+    /* фф (свойство больше не работает, других способов тоже нет)*/
+    .doc-menu-show { overflow: -moz-scrollbars-none; }
+}

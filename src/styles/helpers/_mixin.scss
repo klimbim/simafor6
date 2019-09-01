@@ -1,0 +1,98 @@
+//media_mixin.scss
+@mixin _1400{
+    @media (max-width: 1400px){
+        @content;
+    }
+}
+
+
+@mixin _1170 {
+    @media (max-width: 1170px){
+        @content;
+    }
+}
+
+@mixin _1024 {
+    @media (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin _979 {
+    @media (max-width: 979px){
+        @content;
+    }
+}
+
+@mixin _960 {
+    @media (max-width: 960px){
+        @content;
+    }
+}
+
+@mixin _768 {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin _600 {
+    @media (max-width: 600px){
+        @content;
+    }
+}
+
+@mixin _480 {
+    @media (max-width: 480px){
+        @content;
+    }
+}
+
+@mixin _350{
+    @media (max-width: 350px){
+        @content;
+    }
+}
+
+
+@mixin link-white-60{
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    // font-size: 52px;
+    @include scss-font-lock(16px, 60px, 600px, 1700px);
+    line-height: 113.37%;
+    letter-spacing: 0.145em;
+    text-transform: uppercase;
+}
+
+// @mixin arrow{
+//     span{
+//     position: relative;
+//     align-self: center;
+//     padding-right: 32px;
+//     transition: .2s;
+//     // background: url("../img/arrow-link.svg") no-repeat right 2px center/15px 15px;
+//         &:hover{
+            
+//             // background: url("../img/arrow-link.svg") no-repeat right -1px center/15px 15px;
+//         }
+//         &::after{
+//             content: '';
+//             position: absolute;
+//             height: 3px;
+//             top: 50%;
+//             margin-top: -1px;
+//             right: 5px;
+//             width: 0;
+//             background: #fff;
+//             transition: .2s;
+//         }
+//         &:hover::after{
+//             width: 17px;
+//             right: 3px;
+//             top: 49%;
+//         }
+//     }
+// }

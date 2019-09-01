@@ -1,0 +1,97 @@
+
+.blue{
+	color: $blue;
+}
+
+.orange{
+	color: $orange; 
+}
+
+.imgArrow{
+	width: 10px!important;
+	margin-left: 10px;
+	transition: all 0.1s ease-in-out;
+	vertical-align: middle;
+}
+
+span:hover, a:hover{
+	// transition: 0.3ms;
+	.imgArrow{
+		
+		transform: translateX(8px);
+		
+	}
+}
+
+li{@include scss-font-lock(15px, 20px, 600px, 1700px);}
+
+// inputs
+
+input[type="text"], input[type="tel"],input[type="email"]{
+	border: 1px solid #E6E7E8;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	font-style: normal;
+	font-weight: normal;
+	@include scss-font-lock(15px, 20px, 600px, 1700px);
+	line-height: 1.5px;
+	padding: 10px 0;
+	margin-bottom: 20px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	// font-size: 20px;
+	// line-height: 162.15%;
+
+	/* dark grey */
+	color: #000000;
+}
+
+// input[placeholder] {}
+input::-webkit-input-placeholder {color: #A1A2A3;}
+input:-moz-placeholder {color: #A1A2A3;}
+
+
+
+.annotation, .submenu-dinamic{
+	h3{
+		color: white;
+		font-style: normal;
+		font-weight: bold;
+		font-weight: bold;
+		margin-right: 30px;
+		margin-bottom: 40px;
+		// font-size: 26px;
+		line-height: 2.3;
+		position: relative;
+		top: -8px;
+		@include scss-font-lock(16px, 20px, 600px, 1700px);
+		// line-height: 113.37%;
+	}
+	span{
+		font-style: normal;
+		font-weight: normal;
+		@include scss-font-lock(14px, 20px, 600px, 1700px);
+		// font-size: 20px;
+		line-height: 2;
+		margin-right: 30px;
+		/* or 200% */
+
+		color: #FFFFFF;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+	strong{
+		font-weight: bold;
+		display: block;
+	}
+}
+
+
+
+
+
+
+
+
