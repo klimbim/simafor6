@@ -611,6 +611,7 @@
       }
       &__items{
 		  width: calc(100% / 2.25 * 1.25);
+		  padding: 2rem;
 		  p{
 			//   margin-bottom: 40px;
 		  }
@@ -746,6 +747,9 @@
 	}
 
 	.footer__partners{
+		flex: 1 0 100%;
+	}
+	.footer__feedback{
 		flex: 1 0 100%;
 	}
 

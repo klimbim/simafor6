@@ -93,11 +93,11 @@ $(document).ready(function () {
         margin: 10
     });
 
-    $('.mainPaginator').next().find(".owl-prev1").on('click', function () {
+    $('.owl-carousel').find(".owl-prev1").on('click', function () {
         $('.owl-carousel').trigger("next.owl.carousel");
         console.log('prev');
     });
-    $('.mainPaginator').next().find(".owl-next2").on('click', function () {
+    $('.mainPaginator').find(".owl-next2").on('click', function () {
         console.log('next');
         $('.owl-carousel').trigger("prev.owl.carousel");
     });
