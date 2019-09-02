@@ -1,5 +1,12 @@
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+
+import MicroModal from 'micromodal';
+// import 'micromodal';
+MicroModal.init();
+
+
+
 let navList = document.querySelector('.wrap-mob-menu')
 let subMenu = document.querySelector('.nav-items')
 let navLinks = document.querySelector('.nav-links')
@@ -90,9 +97,12 @@ $(document).ready(function () {
         items: 1,
         nav: false,
         loop: true,
+        dots: true,
+        dotsContainer: '.pagination',
         margin: 10
     });
 
+   
     $('.owl-carousel').find(".owl-prev1").on('click', function () {
         $('.owl-carousel').trigger("next.owl.carousel");
         console.log('prev');
@@ -103,6 +113,29 @@ $(document).ready(function () {
     });
 });
 
+$('.pagination-link').click(function () {
+    $('.owl-carousel').trigger('to.owl.carousel', [$(this).index(), 300]);
+    console.log($(this).index());
+    
+})
+
+
+
+// $(document).ready(function () {
+//     var slickOpts = {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//         //centerMode: true,
+//         easing: 'swing', // see http://api.jquery.com/animate/
+//         speed: 700,
+//         dots: true,
+//         customPaging: function (slick, index) {
+//             return '<a>' + (index + 1) + '</a>';
+//         }
+//     };
+//     // Init slick carousel
+//     $('#carousel').slick(slickOpts);
+// });
 
 // window.addEventListener('load', () => {
 //     var menu = ['1', '2', '3']
