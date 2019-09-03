@@ -1,9 +1,8 @@
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
-import MicroModal from 'micromodal';
-// import 'micromodal';
-MicroModal.init();
+
+import Modal from './modal';
 
 
 
@@ -99,7 +98,10 @@ $(document).ready(function () {
         loop: true,
         dots: true,
         dotsContainer: '.pagination',
-        margin: 10
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true
     });
 
    
@@ -118,6 +120,9 @@ $('.pagination-link').click(function () {
     console.log($(this).index());
     
 })
+
+
+
 
 
 
