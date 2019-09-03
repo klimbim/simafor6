@@ -259,6 +259,7 @@
 				span{
 					&:hover{
 						color: $blue;
+						path{stroke: $blue}
 					}
 				}
 				&:nth-child(2){
@@ -268,6 +269,7 @@
 					span{
 						&:hover{
 							color: $orange;
+							path{stroke: $orange}
 						}
 					}
 				}
@@ -305,6 +307,9 @@
 	  &__link-all{
 			@include text_30_a;
 			font-weight: 700;
+			path{
+				stroke: $darkBlue;
+			}
 			
 			text-align: center;
 			position: relative;

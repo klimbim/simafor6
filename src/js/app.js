@@ -125,50 +125,38 @@ $('.pagination-link').click(function () {
 
 
 
+// svg color
 
+$('img.imgArrow').each(function () {
+    var $img = $(this);
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+    $.get(imgURL, function (data) {
+        var $svg = $(data).find('svg');
+        if (typeof imgClass !== 'undefined') {
+            $svg = $svg.attr('class', imgClass + ' replaced-svg');
+        }
+        $svg = $svg.removeAttr('xmlns:a');
+        if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+            $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+        }
+        $img.replaceWith($svg);
+    }, 'xml');
+});
 
-
-// $(document).ready(function () {
-//     var slickOpts = {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         //centerMode: true,
-//         easing: 'swing', // see http://api.jquery.com/animate/
-//         speed: 700,
-//         dots: true,
-//         customPaging: function (slick, index) {
-//             return '<a>' + (index + 1) + '</a>';
-//         }
-//     };
-//     // Init slick carousel
-//     $('#carousel').slick(slickOpts);
-// });
-
-// window.addEventListener('load', () => {
-//     var menu = ['1', '2', '3']
-//     // let autoplay = 5000
-//     var mySwiper = new Swiper('.swiper-container', {
-//         speed: 400,
-//         spaceBetween: 100,
-//         loop: true,
-//         // autoplay: 3000,
-//         // width: 390,
-//         pagination: {
-//             el: '.swiper-pagination',
-//             clickable: true,
-//             renderBullet: function (index, className) {
-//                 return '<span class="pagination-link ' + className + '">' + (menu[index]) + '</span>';
-//             },
-//         },
-//         navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev',
-//         },
-//         autoplay: {
-//             delay: 3000,
-//         },
-//     });
-
-// }, false);
-// Slider Paginator
-
+$('img.imgArrow1').each(function () {
+    var $img = $(this);
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+    $.get(imgURL, function (data) {
+        var $svg = $(data).find('svg');
+        if (typeof imgClass !== 'undefined') {
+            $svg = $svg.attr('class', imgClass + ' replaced-svg');
+        }
+        $svg = $svg.removeAttr('xmlns:a');
+        if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+            $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+        }
+        $img.replaceWith($svg);
+    }, 'xml');
+});

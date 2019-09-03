@@ -10,10 +10,12 @@
 	border: 1px solid #4B69FF;
 	color: #4B69FF;
 	background: none;
+	path{stroke: $blue;}
 	cursor: pointer;
 	&:hover{
 		color: white;
 		background-color: $blue;
+		path{stroke: #fff;}
 	}
 }
 
