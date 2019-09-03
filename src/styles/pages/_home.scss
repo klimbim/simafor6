@@ -755,8 +755,10 @@
 		flex: 1 0 100%;
 	}
 	.footer__feedback{
-		flex: 1 0 100%;
+		// flex: 1 0 100%;
+		width: 100%;
 	}
+	// .footer{width: 100vw;}
 
 
 }
