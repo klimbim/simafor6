@@ -8,35 +8,33 @@ import cookieModal from './cookieModal';
 
 
 
-let navList = document.querySelector('.wrap-mob-menu')
-let subMenu = document.querySelector('.nav-items')
-let navLinks = document.querySelector('.nav-links')
+let navList = document.querySelector('.wrap-mob-menu');
+let subMenu = document.querySelector('.nav-items');
+let navLinks = document.querySelector('.nav-links');
 // let subMenuDinamic = document.querySelector('.submenu-dinamic-mob')
-let subMenuDinamicWrap = document.querySelector('.submenu-dinamic')
-let buttonBack = document.querySelector('.backButton')
+let subMenuDinamicWrap = document.querySelector('.submenu-dinamic');
+let buttonBack = document.querySelector('.backButton');
 // var navActiveMob
-let navActive = document.querySelector('.nav-active')
-const windowSize = document.querySelector('.bodyClass')
+let navActive = document.querySelector('.nav-active');
+const windowSize = document.querySelector('.bodyClass');
 
 function reportWindowSize() {
     if (window.matchMedia('(min-width: 1024px)').matches) {
-        subMenu.classList.remove('menu-show')
-        navLinks.classList.remove('menu-show')
+        subMenu.classList.remove('menu-show');
+        navLinks.classList.remove('menu-show');
         if (buttonBack) {buttonBack.classList.remove('displayActive')}
         if (navActive) { navActive.classList.remove('nav-active-mob')}
         
         if (subMenuDinamicWrap) { subMenuDinamicWrap.classList.remove('submenu-dinamic-mob')}
         // subMenu.classList.remove('menu-show')
-        navList.classList.remove('active')
+        navList.classList.remove('active');
 
         console.log('resize');
     }
 }
 
 
-$(document).ready(function () {
-    console.log('Ваша версия jQuery ' + jQuery.fn.jquery);
-});
+
 
 window.onresize = reportWindowSize;
 
@@ -45,13 +43,13 @@ window.onresize = reportWindowSize;
 navList.addEventListener('click', () => {
     if (navList.classList.contains('active')){
     }else{
-        if (subMenuDinamicWrap) { subMenuDinamicWrap.classList.add('submenu-dinamic-mob')}
-        if (buttonBack) { buttonBack.classList.add('displayActive')}
+        if (subMenuDinamicWrap) { subMenuDinamicWrap.classList.add('submenu-dinamic-mob');}
+        if (buttonBack) { buttonBack.classList.add('displayActive');}
         
     }
-    subMenu.classList.toggle('menu-show')
-    navLinks.classList.toggle('menu-show')
-    navList.classList.toggle('active')
+    subMenu.classList.toggle('menu-show');
+    navLinks.classList.toggle('menu-show');
+    navList.classList.toggle('active');
 
     if (navActive) { navActive.classList.toggle('nav-active-mob')}
     // navActiveMob = document.querySelector('.nav-active-mob')
@@ -61,8 +59,8 @@ navList.addEventListener('click', () => {
 
 if (buttonBack) {
     buttonBack.addEventListener('click', () => {
-        buttonBack.classList.remove('displayActive')
-        subMenuDinamicWrap.classList.remove('submenu-dinamic-mob')
+        buttonBack.classList.remove('displayActive');
+        subMenuDinamicWrap.classList.remove('submenu-dinamic-mob');
     })
 }
 
@@ -71,21 +69,21 @@ if (buttonBack) {
 
 if (navActive) {
     navActive.addEventListener('click', ()=>{
-        subMenuDinamicWrap.classList.add('submenu-dinamic-mob')
-        buttonBack.classList.add('displayActive')
+        subMenuDinamicWrap.classList.add('submenu-dinamic-mob');
+        buttonBack.classList.add('displayActive');
     })
 }
 
 
 
 //Страница документы. Оранжевая плашка
-let docButton = document.querySelector('.documents-button-nav')
-let docSideMenu = document.querySelector('.page-documents__nav')
+let docButton = document.querySelector('.documents-button-nav');
+let docSideMenu = document.querySelector('.page-documents__nav');
 
 if (docButton) {
     docButton.addEventListener('click', ()=>{
-        docSideMenu.classList.toggle('doc-menu-show')
-        docButton.classList.toggle('doc-button-up')    
+        docSideMenu.classList.toggle('doc-menu-show');
+        docButton.classList.toggle('doc-button-up')   ; 
     })
 }
 //Страница документы. Оранжевая плашка ..... Конец

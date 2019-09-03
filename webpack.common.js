@@ -56,7 +56,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'tris-webpack-boilerplate',
+      title: 'index',
       filename: 'index.html',
       template: './src/index.html',
       inject: 'head'

@@ -39,18 +39,18 @@ module.exports = merge(common, {
               sourceMap: true
             }
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              config: {
-                path: __dirname + '/postcss.config.js',
-                ctx: {
-                  env: 'production'
-                }
-              }
-            }
-          },
+          // {
+          //   loader: 'postcss-loader',
+          //   options: {
+          //     sourceMap: true,
+          //     config: {
+          //       path: __dirname + '/postcss.config.js',
+          //       ctx: {
+          //         env: 'production'
+          //       }
+          //     }
+          //   }
+          // },
           {
             loader: 'sass-loader',
             options: {
@@ -106,6 +106,6 @@ module.exports = merge(common, {
   ],
   output: {
     filename: '[name].[contentHash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './dist')
   }
 });
