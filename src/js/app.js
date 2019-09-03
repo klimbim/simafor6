@@ -3,6 +3,8 @@ import 'owl.carousel';
 
 
 import Modal from './modal';
+import cookieModal from './cookieModal';
+
 
 
 
