@@ -10,7 +10,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const CompressionPlugin = require('compression-webpack-plugin');
 
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 
 module.exports = merge(common, {
@@ -24,7 +24,7 @@ module.exports = merge(common, {
           {
             loader: 'html-loader',
             options: {
-              minimize: true
+              minimize: false
             }
           }
         ]
@@ -95,13 +95,13 @@ module.exports = merge(common, {
         })
       ]
     }),
-    new FaviconsWebpackPlugin({
-      logo: './src/img/logo.svg',
-      icons: {
-        twitter: true,
-        windows: true
-      }
-    }),
+    // new FaviconsWebpackPlugin({
+    //   logo: './src/img/logo.svg',
+    //   icons: {
+    //     twitter: true,
+    //     windows: true
+    //   }
+    // }),
     new OfflinePlugin()
   ],
   output: {
