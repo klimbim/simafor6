@@ -106,12 +106,12 @@ $(document).ready(function () {
 
    
     $('.owl-carousel').find(".owl-prev1").on('click', function () {
-        $('.owl-carousel').trigger("next.owl.carousel");
+        $('.owl-carousel').trigger("prev.owl.carousel");
         console.log('prev');
     });
     $('.mainPaginator').find(".owl-next2").on('click', function () {
         console.log('next');
-        $('.owl-carousel').trigger("prev.owl.carousel");
+        $('.owl-carousel').trigger("next.owl.carousel");
     });
 });
 
