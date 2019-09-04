@@ -2,7 +2,7 @@ import Cookies from "js-cookie";
 
 import MicroModal from 'micromodal';
 
-Cookies.set('name', 'value');
+
 
 // cookieModal
 
@@ -43,5 +43,9 @@ $('#closecookie').on('click', function(){
     });
     MicroModal.close('cookieModal');
 })
+
+
+
+
 
 
