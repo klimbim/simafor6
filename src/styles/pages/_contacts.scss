@@ -14,11 +14,24 @@
 .lawInfo{
 	display: flex;
 	align-items: center;
+	a{
+		text-decoration: none;
+		color: #A1A2A3;
+	}
+	&:hover{
+		a{
+			// text-decoration: none;
+			color: $blue;
+		}
+		path, circle{
+			stroke: $blue;
+		}
+	}
 }
 
 .iagree-button{
 	width: inherit!important;
-	height: 20px;
+	height: 30px;
 	display: block;
 	margin-right: 20px;
 }
@@ -68,7 +81,7 @@
 		font-style: normal;
 		font-weight: normal;
 		@include scss-font-lock(15px, 20px, 600px, 1700px);
-		line-height: 1.5px;
+		line-height: 1.5;
 		padding: 30px 20px;
 		margin-bottom: 20px;
 		
@@ -126,7 +139,7 @@
 	.page-contact{
 		padding: 0;
 		flex-direction: column;
-		.container{padding: 2rem;}
+		.container{padding: 4rem 2rem 2rem;}
 		.input-items{
 			&::before{
 				width: 50px;

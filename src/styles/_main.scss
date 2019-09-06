@@ -36,7 +36,7 @@ input[type="text"], input[type="tel"],input[type="email"]{
 	font-weight: normal;
 	@include scss-font-lock(15px, 20px, 600px, 1700px);
 	line-height: normal;
-	padding: 10px 0;
+	padding: 10px 15px;
 	margin-bottom: 20px;
 	font-family: Montserrat;
 
@@ -51,7 +51,7 @@ input[type="text"], input[type="tel"],input[type="email"]{
 input::-webkit-input-placeholder {color: #A1A2A3;}
 input:-moz-placeholder {color: #A1A2A3;}
 
-
+textarea{-webkit-appearance: none;}
 
 .annotation, .submenu-dinamic{
 	h3{

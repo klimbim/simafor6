@@ -3,6 +3,7 @@ import 'owl.carousel';
 
 
 import Modal from './modal';
+import PhoneMask from './phone-mask';
 // import cookieModal from './cookieModal';
 
 
