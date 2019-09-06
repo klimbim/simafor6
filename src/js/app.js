@@ -1,6 +1,8 @@
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
+// import * as $ from 'jquery';
+
 
 import Modal from './modal';
 import PhoneMask from './phone-mask';
@@ -159,3 +161,19 @@ $('img.imgArrow1').each(function () {
         $img.replaceWith($svg);
     }, 'xml');
 });
+
+
+
+
+// if (buttonBack) {
+// $('.about__life__tab').click(function () {
+//         var elementClick = $(this).attr('for');
+        
+//         var destination = $(elementClick).offset().top;
+//         console.log(destination);
+        
+//         $('html, body').animate({ scrollTop: destination }, 600);
+        
+//         return false;
+//     })
+// }
