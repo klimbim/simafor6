@@ -27,7 +27,7 @@
             transform: translateY(-50%);
         }
     }
-    a{
+    li a{
     // font-family: Montserrat;
         display: block;
         text-decoration: none;
@@ -261,7 +261,7 @@
 }
 
 .page-news-s{
-    a{
+    a li{
         margin-bottom: 30px;
         @include scss-font-lock(15px, 20px, 600px, 1700px);
         line-height: 2;

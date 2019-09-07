@@ -10,6 +10,10 @@
 	border: 1px solid #4B69FF;
 	color: #4B69FF;
 	background: none;
+	display: block;
+	max-width: 400px;
+    text-align: center;
+    text-decoration: none;
 	path{stroke: $blue;}
 	cursor: pointer;
 	&:hover{
@@ -32,6 +36,12 @@
 	border: 1px solid #ffffff;
 	color: #ffffff;
 	background: none;
+	display: block;
+	max-width: 200px;
+	margin: 0 auto;
+    text-align: center;
+	text-decoration: none;
+	position: relative;
 	cursor: pointer;
 	&:hover{
 		color: $blue;

@@ -62,22 +62,46 @@ module.exports = merge(common, {
     ]
   },
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendors',
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true
+        },
+        // styles: {
+        //   name: 'all',
+        //   test: /\.s?css$/,
+        //   chunks: 'all',
+        //   enforce: true,
+        //   minChunks: 1,
+        //   reuseExistingChunk: true,
+        // },
+      }
+    },
     minimizer: [
       new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-        parallel: true,
-        sourceMap: true
-      })
+        chunkFilter: (chunk) => {
+          // Exclude uglification for the `vendor` chunk
+          if (chunk.name === 'main') {
+            return false;
+          }
+          
+
+          return true;
+        },
+      }),
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'app.css',
-      chunkFilename: '[id].css'
+      filename: 'all.css',
+      chunkFilename: 'vendor.css'
     }),
-    new CompressionPlugin({
-      test: /\.(html|css|js)(\?.*)?$/i // only compressed html/css/js, skips compressing sourcemaps etc
-    }),
+    // new CompressionPlugin({
+    //   test: /\.(html|css|js)(\?.*)?$/i // only compressed html/css/js, skips compressing sourcemaps etc
+    // }),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
       gifsicle: {
@@ -102,7 +126,7 @@ module.exports = merge(common, {
     //     windows: true
     //   }
     // }),
-    new OfflinePlugin()
+    // new OfflinePlugin()
   ],
   output: {
     filename: '[name].js',
